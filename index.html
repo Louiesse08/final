@@ -1,0 +1,329 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café de la Creme</title>
+    <style>
+        body 
+        {
+            background-color: #7B3E0D;
+            font-family: 'Arial', sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        #header 
+        {
+            background-color: #B3A492;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #logo img 
+        {
+            display: block;
+            margin: 0 auto;
+            width: 200px;
+            height: auto;
+        }
+
+        #navbar 
+        {
+            background-color: #7B3E0D;
+            font-family: 'Arial', sans-serif;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #navbar ul 
+        {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        #navbar li 
+        {
+            margin: 0 20px;
+        }
+
+        #navbar a 
+        {
+            color: white; 
+            text-decoration: none;
+        }
+
+        h1, h2, h3 
+        {
+            text-align: center;
+            color: #B3A492;
+        }
+
+        p 
+        {
+            text-align: center;
+        }
+        
+        .content 
+        {
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        #about, #menu, #contact 
+        {
+            background-color: #B3A492;
+        }
+
+        #menu ul 
+        {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        #menu li 
+        {
+            width: 200px;
+            margin: 10px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #B3A492;
+            border-radius: 8px;
+            padding: 10px;
+            transition: transform 0.3s;
+        }
+
+        #menu li img 
+        {
+            width: 100%;
+            height: auto;
+            transition: opacity 0.3s ease;
+        }
+
+        #menu li h3 
+        {
+            margin: 10px 0;
+            color: #fff;
+        }
+
+        #menu li p 
+        {
+            font-size: 14px;
+            color: #fff;
+        }
+
+        #menu li:hover 
+        {
+            transform: scale(1.05);
+        }
+
+        #menu li:hover img 
+        {
+            opacity: 0.7;
+        }
+
+        #about, #contact 
+        {
+            background-color: #B3A492;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        #button-container, #cvButtonContainer 
+        {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #showButton, #cvButton 
+        {
+            background-color: #7B3E0D;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 0 10px;
+        }
+        
+         #lightbox 
+         {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+
+        #lightbox img 
+        {
+            max-width: 80%;
+            max-height: 80%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div id="logo">
+            <img src="https://i.pinimg.com/736x/9f/84/35/9f8435f704e876c8995dd18e909ee1b7.jpg" alt="Café de la Creme" width="200" height="120">
+        </div>
+    </div>
+
+    <div id="navbar">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+   <h1>Welcome to Café de la Creme</h1>
+
+    <div id="about">
+        <h2>About Café de la Creme</h2>
+        <p>Café de la Creme is more than just a café; it's an experience crafted with passion and dedication. Nestled in the heart of the city, our charming establishment is a haven for coffee enthusiasts and pastry connoisseurs alike.</p>
+        <p>Step into our cozy atmosphere, where every detail is designed to enhance your moments of relaxation. Whether you're seeking the robust flavors of a rich espresso, the velvety smoothness of a cappuccino, or the delightful indulgence of our pastries, Café de la Creme promises an unforgettable journey for your taste buds.</p>
+        <p>Our commitment to excellence is reflected in our menu, featuring a diverse range of coffee blends and an array of delectable pastries. From the moment you walk through our doors, you'll be greeted by the enticing aroma of freshly brewed coffee and the allure of handcrafted treats.</p>
+        <p>Indulge in the artistry of our baristas as they expertly prepare your favorite brews, from classic espresso shots to carefully layered cappuccinos. Pair your coffee with our selection of mouthwatering pastries, including buttery croissants, heavenly muffins, and sweet, flaky danishes.</p>
+        <p>At Café de la Creme, we believe in curating an experience that goes beyond the ordinary. It's a place where friends gather, conversations flow, and every sip and bite is a celebration of flavor. Join us on a journey of taste and ambiance, where each visit is an invitation to savor the finest in coffee and desserts.</p>
+    </div>
+
+    <div id="menu">
+        <h2>Menu</h2>
+        <ul>
+            <li>
+                <h3>Espresso</h3>
+                <img src="https://foodsguy.com/wp-content/uploads/2022/02/Espresso.jpg" alt="Espresso" width="200" height="120">
+                <p>Strong and concentrated black coffee</p>
+            </li>
+            <li>
+                <h3>Cappuccino</h3>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Cappuccino_at_Sightglass_Coffee.jpg" alt="Cappuccino" width="200" height="120">
+                <p>Espresso with equal parts of steamed milk and foam</p>
+            </li>
+            <li>
+                <h3>Latte</h3>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/A_cup_of_latte_with_lunch_at_Merewether_Beach%2CAustralia.jpeg" alt="Latte" width="200" height="120">
+                <p>Espresso with a large amount of steamed milk</p>
+            </li>
+            <li>
+                <h3>Mocha</h3>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Mocha_coffee.jpg" alt="Mocha" width="200" height="120">
+                <p>Espresso with chocolate and steamed milk</p>
+            </li>
+            <li>
+                <h3>Americano</h3>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Espresso_Americano.jpeg" alt="Americano" width="200" height="120">
+                <p>Diluted espresso with hot water</p>
+            </li>
+            <li>
+                <h3>Macchiato</h3>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Macchiato.JPG" alt="Macchiato" width="200" height="120">
+                <p>Espresso with a small amount of frothy milk</p>
+            </li>
+            <li>
+                <h3>Muffins</h3>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/02116jfMuffins_in_Philippinesfvf_02.jpg" alt="Muffins" width="200" height="120">
+                <p>Delicious muffins to complement your coffee</p>
+            </li>
+            <li>
+                <h3>Croissants</h3>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/28/2018_01_Croissant_IMG_0685.JPG" alt="Croissants" width="200" height="120">
+                <p>Buttery and flaky croissants</p>
+            </li>
+            <li>
+                <h3>Danishes</h3>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Cinnamon_danish_in_Copenhagen.jpg" alt="Danishes" width="200" height="120">
+                <p>Sweet and delightful danishes</p>
+            </li>
+            <li>
+                <h3>Chocolate Cake</h3>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Chocolate_fudge_cake.jpg" alt="Cake" width="200" height="120">
+                <p>Indulgent chocolate cake for a sweet treat</p>
+            </li>
+            <li>
+                <h3>Tea</h3>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Tea_in_different_grade_of_fermentation.jpg" alt="Tea" width="200" height="120">
+                <p>A selection of fine teas to enjoy</p>
+            </li>
+            <li>
+                <h3>Hot Chocolate</h3>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Hei%C3%9Fe_Schokolade.jpg" alt="Hot Chocolate" width="200" height="120">
+                <p>Rich and creamy hot chocolate</p>
+            </li>
+            <li>
+                <h3>Fruit Salad</h3>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Sweet_Summer_Rainbow_Fruit_Salad.jpg" alt="Fruit Salad" width="200" height="120">
+                <p>Fresh and vibrant fruit salad</p>
+            </li>
+            <li>
+                <h3>Sandwiches</h3>
+                <img src="https://i.pinimg.com/originals/4b/09/6d/4b096dee039b3d5896ed156d32578fac.jpg" alt="Sandwiches" width="200" height="120">
+                <p>Delicious sandwiches for a quick bite</p>
+            </li>
+            <li>
+                <h3>Pasta</h3>
+                <img src="https://i.pinimg.com/564x/75/55/e7/7555e75239a50b7472051077e30f7554.jpg" alt="Pasta" width="200" height="120">
+                <p>Classic pasta dishes cooked to perfection</p>
+            </li>
+        </ul>
+    </div>
+
+   <div id="contact">
+        <h2>Contact Us</h2>
+        <p>Visit us at: 123 Cafe Street, Coffee City, CA</p>
+        <p>Phone: 09654773078</p>
+    </div>
+
+    <div id="cvButtonContainer">
+        <a id="cvButton" href="#" onclick="openLightbox()">View Curriculum Vitae</a>
+    </div>
+
+    <div id="lightbox" onclick="closeLightbox()">
+      
+    </div>
+
+    <script>
+        function showAbout()
+        {
+            document.getElementById('about').style.display = 'block';
+        }
+
+        function openLightbox() 
+        {
+            var imageUrl = "https://i.pinimg.com/originals/e1/e8/68/e1e8683b6f98a0d3b5c17de46960b370.png";
+            document.getElementById("lightbox").innerHTML = "<img src='" + imageUrl + "'>";
+            document.getElementById("lightbox").style.display = "flex";
+        }
+
+        function closeLightbox()
+        {
+            document.getElementById("lightbox").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
